@@ -1,73 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Cosmic Dodge</title>
 
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="game-container">
+      <div class="top-bar">
+        <h1>🚀 Cosmic Dodge</h1>
 
-        <div class="top-bar">
-            <h1>🚀 Cosmic Dodge</h1>
+        <div class="stats">
+          <span>Puntos: <strong id="score">0</strong></span>
+          <span>Récord: <strong id="best">0</strong></span>
+          <span>❤️ <strong id="lives">3</strong></span>
+        </div>
+      </div>
 
-            <div class="stats">
-                <span>Puntos: <strong id="score">0</strong></span>
-                <span>Récord: <strong id="best">0</strong></span>
-                <span>❤️ <strong id="lives">3</strong></span>
-            </div>
+      <div class="game-area">
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div class="menu" id="startMenu">
+          <h2>🚀 COSMIC DODGE</h2>
+
+          <p>Esquiva los meteoritos y sobrevive todo lo que puedas.</p>
+
+          <button id="startButton">Empezar partida</button>
+
+          <small>
+            PC: ← → o A / D<br />
+            Móvil: toca y arrastra
+          </small>
         </div>
 
-        <div class="game-area">
+        <div class="menu hidden" id="gameOverMenu">
+          <h2>💥 GAME OVER</h2>
 
-            <canvas id="gameCanvas" width="800" height="500"></canvas>
+          <p>
+            Puntuación:
+            <strong id="finalScore">0</strong>
+          </p>
 
-            <div class="menu" id="startMenu">
-                <h2>🚀 COSMIC DODGE</h2>
-
-                <p>
-                    Esquiva los meteoritos y sobrevive todo lo que puedas.
-                </p>
-
-                <button id="startButton">
-                    Empezar partida
-                </button>
-
-                <small>
-                    PC: ← → o A / D<br>
-                    Móvil: toca y arrastra
-                </small>
-            </div>
-
-            <div class="menu hidden" id="gameOverMenu">
-
-                <h2>💥 GAME OVER</h2>
-
-                <p>
-                    Puntuación:
-                    <strong id="finalScore">0</strong>
-                </p>
-
-                <button id="restartButton">
-                    Jugar otra vez
-                </button>
-
-            </div>
-
+          <button id="restartButton">Jugar otra vez</button>
         </div>
+      </div>
 
-        <p class="instructions">
-            Esquiva los meteoritos y consigue la máxima puntuación.
-        </p>
-
+      <p class="instructions">
+        Esquiva los meteoritos y consigue la máxima puntuación.
+      </p>
     </div>
 
-    <script src="/js/script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
